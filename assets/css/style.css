@@ -1,0 +1,160 @@
+/* color sample
+  cream : #E8E5E2
+  second color : #F5F5F5
+  third color : #EFEFEF
+*/
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+*{
+    padding : 0;
+    margin : 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;    
+}
+
+.navbar{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 20px 10px;
+    background-color: #F5F5F5;
+}
+
+.navbar .logo{
+    margin: 5px 10px 0 20px;
+}
+
+.navbar h1{
+    font-size: 40px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+
+
+#tagline{
+    padding: 100px;
+    background-color: #E8E5E2;
+}
+
+#tagline .flex{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#tagline .flex p{
+    letter-spacing: 4px;
+}
+
+#tagline .flex h1{
+    font-size: 50px;
+    font-weight: 300;
+    margin-top: 10px;
+    letter-spacing: 4px;
+}
+
+#food-category{
+    background-color: #F5F5F5;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+} 
+
+#food-category .menu_item{
+    padding: 10px;
+    flex: 0.5;
+    display: inline-block;
+    width: 370px;
+    background: rgba( 223, 207, 207, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 3px );
+    -webkit-backdrop-filter: blur( 3px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+#food-detail .menu_item{
+    margin: 7px;
+    flex: 0.5;
+    display: inline-block;
+    width: 370px;
+    background: rgba( 223, 207, 207, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 3px );
+    -webkit-backdrop-filter: blur( 3px );
+    border-radius: 20px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+#food-category .menu_item a{
+    text-decoration: none;
+    color: black;
+}
+
+#food-category .menu_item a img,
+#food-detail .menu_item img{
+    background-size: cover;
+    width: 100%;
+}
+
+#food-category .menu_item a h3,
+#food-detail .menu_item h3{
+    margin: 20px 0;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#food-category .menu_item a p{
+    padding: 15px;
+    max-lines: 3;
+    line-height: 1.8;
+    max-lines: 1;
+}
+
+
+@media screen and (min-width: 150px){
+   #food-category{
+    padding: 0px;
+    padding-top: 10px;
+   }
+
+    #tagline .flex p,
+    #tagline .flex h1{
+        display: none;
+    }
+    
+
+    #food-category{
+        grid-template-columns: repeat(1, 1fr);  
+    }
+}
+
+@media screen and (min-width: 870px){
+    #food-category{
+        grid-template-columns: repeat(2, 1fr);  
+    }
+
+    #tagline .flex p,
+    #tagline .flex h1{
+        display: block;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    #food-category{
+        grid-template-columns: repeat(3, 1fr);  
+    }
+}
+
+@media screen and (min-width: 1500px){
+    #food-category{
+        grid-template-columns: repeat(4, 1fr);  
+    }
+}
+
+
+
+
